@@ -1,11 +1,11 @@
-const Sequelize = require('requelize')
-const sequelize = require('../database/database.js')
+const Sequelize = require('sequelize') 
+const sequelize = require('../database/database')
 
 const Usuario = sequelize.define("usuario", {
     id:{
         allowNull: false,
         autoIncrement: true,
-        primaryKay: true,
+        primaryKey: true,
         type: Sequelize.INTEGER
     },
     nome: {
@@ -24,7 +24,7 @@ const Usuario = sequelize.define("usuario", {
     },
     dataNascimento: {
         allowNull: false,
-        type: Sequelize.date(),
+        type: Sequelize.DATE(),
     },
     ativo:{
         allowNull: false,
