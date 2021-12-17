@@ -31,3 +31,13 @@ exports.Insert = (req, res, next) => {
         //catch = registra o que queremos que aconteca quando a Promise falhar
         .catch(error => next(error));
 };
+
+exports.SearchAll = (res, req, next) => {
+        Usuario.findAll()
+        .then(usuario => {
+            if(usuario){
+                res.status(status.OK).send(usuario)
+            }
+        })
+        .catch(error => next(error))
+}
