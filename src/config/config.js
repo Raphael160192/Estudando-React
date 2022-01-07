@@ -5,8 +5,8 @@ module.exports = {
             port:3306,
             name: 'cursoNodeMySql',
             dialect: 'mysql',
-            user: 'rgundim',
-            password:'Juli@16072@21'
+            user: 'root',
+            password:'Julia@123'
 
         }
     },
